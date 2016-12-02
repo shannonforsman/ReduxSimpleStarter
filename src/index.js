@@ -1,15 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import ReactDom from 'react-dom';
+//const is an ES6 syntax - declaring a variable where it's the final value, we'll never reassign it (constant)
+const App = () => {
+  return <div>Hi!</div>;
+}
 
-import App from './components/app';
-import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ReactDom.render(<App />, document.querySelector('.container'));
